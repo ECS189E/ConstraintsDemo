@@ -17,7 +17,7 @@
 3. Cell style: subtitle
 
 ## Navigation Controller
-1. perform different segue with different identifiers
+1. perform different segues with different identifiers
 
 ## Others
 1. Dictionary in swift
