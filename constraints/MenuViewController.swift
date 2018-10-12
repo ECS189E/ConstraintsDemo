@@ -46,7 +46,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func layoutInit() {
         // How to change constraint during runtime
-        // Can be used if you can only calculate the constraint during runtime/
+        // Can be used if you can only calculate the constraint during runtime
         betweenTitleAndTable.constant = 100
     }
     
@@ -59,6 +59,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     // UITableViewDataSource
     // Set each cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // Remember to change the identifier on storyboard too.
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath)
         
         // The cell is set to "subtitle".

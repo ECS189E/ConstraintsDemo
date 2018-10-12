@@ -9,6 +9,7 @@
 import UIKit
 
 // Customized cell
+// Change the class of the cell on storyboard too (like for view controller)
 // Many kinds of objects can be added to it. e.g. UIImageView.
 // But make sure you handle the constriants right.
 class keyboardCell: UICollectionViewCell {
@@ -32,10 +33,11 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         // This is the only other situation that I use "!".
+        // Remember to change the identifier on storyboard too.
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! keyboardCell
         cell.cellLabel.text = data[indexPath.row]
         
-        // For color
+        // For colors
         /* https://www.ralfebert.de/ios-examples/uikit/swift-uicolor-picker/ */
         if data[indexPath.row] == "Submit" {
             cell.cellLabel.backgroundColor = UIColor(red: 0.2824, green: 0.7373, blue: 0, alpha: 1.0)
